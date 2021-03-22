@@ -1,0 +1,192 @@
+<QUIZ>
+
+<!-- The URL base where we can find the images.  Defaults to root of domain if not set. -->
+<URLBASE>/newtest/images</URLBASE>
+<NOTRACKMODULE>1234</NOTRACKMODULE>
+<NOCONFIRM/> <!-- Feedback given immediately after clicking a choice -->
+<TIMER>15</TIMER>
+<ID>1001</ID> <!-- Pick a number up to 11 digits for ID. -->
+<AUTHOR>nickular</AUTHOR>
+<TITLE>this is just a test</TITLE>
+<!--
+    Cover sheet contains a short blurb about the survey/quiz that
+    follows.  At the end of the cover sheet the user will be given
+    a chance to log in, create an account, or continue as Guest.
+    Relevant disclosures should go here.
+
+    Data will not be collected if the user chooses Guest.
+
+    HTML is supported.
+-->
+
+
+<COVER>
+&lt;b&gt;
+Protocol Title:&lt;/B&gt; We do not adhere to any protocol.
+
+&lt;B&gt;Your every move is being tracked by a shadow society, completion of this module is required.
+ &lt;P&gt;
+The goal of the Centaur modules is beyond your meager level of comprehension.
+&lt;P&gt;
+&lt;i&gt;
+If you have any question, concerns, or complaints regarding your participation they will be ignored.
+
+&lt;/i&gt;
+
+</COVER>
+
+<QUESTION>
+<TEXT>
+Before we get started, please answer two short questions.
+</TEXT>
+</QUESTION>
+
+<QUESTION>
+<REQUIRED/>
+<TEXT>
+
+Please indicate your level of medical training:
+&lt;table align=center width=500&gt;&lt;TR&gt;&lt;TD&gt;
+&lt;div class="radiobuttons"&gt;
+&lt;input type="radio" name="training" id="traNone" onClick="enableNext()" value="No medical training"&gt;&lt;label for="traNone"&gt;No medical training&lt;/label&gt;&lt;BR&gt;
+&lt;input type="radio" name="training" id="traMedS" onClick="enableNext()" value="Student"&gt;&lt;label for="traMedS"&gt;Medical Student&lt;/label&gt;&lt;BR&gt;
+&lt;input type="radio" name="training" id="traRes" onClick="enableNext()" value="MedSurg Resident"&gt;&lt;label for="traRes"&gt;Medical/Surgical resident&lt;/label&gt;&lt;BR&gt;
+&lt;input type="radio" name="training" id="traRadRes" onClick="$(function() {enableNext(); document.getElementById('RadResTraining').disabled = false;})" value="Radiology Resident"&gt;&lt;label for="traRadRes"&gt;Radiology Resident/TY&lt;/label&gt;
+    &lt;select name="RadResTraining" id="RadResTraining" disabled&gt;
+        &lt;option value="TY"&gt;Transitional
+        &lt;option value="R1"&gt;1st Year
+        &lt;option value="R2"&gt;2nd Year
+        &lt;option value="R3"&gt;3rd Year
+        &lt;option value="R4"&gt;4th Year
+    &lt;/select&gt;
+
+    &lt;BR&gt;
+&lt;input type="radio" name="training" id="traRadFel" onClick="enableNext()" value="Radiology Fellow"&gt;&lt;label for="traRadFel"&gt;Radiology fellow&lt;/label&gt;&lt;BR&gt;
+&lt;input type="radio" name="training" id="traRadAttn" onClick="enableNext()" value="Radiology Attending"&gt;&lt;label for="traRadAttn"&gt;Radiology attending&lt;/label&gt;&lt;BR&gt;
+&lt;input type="radio" name="training" id="traOther" onClick="$(function(){ document.getElementById('trainingOther').disabled = false;})" value="Other"&gt;&lt;label for="traOther"&gt;Other&lt;/label&gt;&lt;input type="text" id="trainingOther" name="trainingOther" size=10 disabled onkeypress="$(function()  { if (document.getElementById('trainingOther').value != '')  { enableNext(); } })"
+
+&gt;&lt;BR&gt;
+
+&lt;/div&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+
+</TEXT>
+</QUESTION>
+
+<QUESTION>
+<REQUIRED/>
+<TEXT>
+
+Approximately how many months of training/practice do you have in the interpretation of chest radiographs?
+
+</TEXT>
+<ANSWER><TEXT>None</TEXT></ANSWER>
+<ANSWER><TEXT>1 Month</TEXT></ANSWER>
+<ANSWER><TEXT>2 Months</TEXT></ANSWER>
+<ANSWER><TEXT>3-4 Months</TEXT></ANSWER>
+<ANSWER><TEXT>5+ Months</TEXT></ANSWER>
+
+</QUESTION>
+
+<QUESTION>
+<TEXT>
+
+&lt;H2&gt;Instructions&lt;/H2&gt;
+
+As you will be interpreting radiographs, at least a 10" screen is recommended.  If possible, enter full screen mode on your browser now.  If you are using a Desktop browser, this is done using the &lt;B&gt;F11&lt;/B&gt; key.  &lt;P&gt;
+
+For each case, please identify the pulmonary abnormality and laterality, or state that the radiograph is normal.  Possible pathologies include:
+
+&lt;UL&gt;
+&lt;LI&gt;Normal (no pathology)
+&lt;LI&gt;Pneumothorax
+&lt;LI&gt;SPN (Solitary pulmonary nodule)
+&lt;LI&gt;FC (Focal consolidation)
+&lt;/UL&gt;
+
+We will begin with a tutorial case.
+
+</TEXT>
+</QUESTION>
+<QUESTION>
+<FEEDBACK/>
+<NOTIMER/>
+<TEXT>
+Familiarize yourself with the answer choices. They are the same throughout the entire module. (SPN = Solitary pulmonary nodule.  FC = Focal consolidation) &lt;p&gt;
+Tablet users, try both Landscape and Portrait orientation and use the one that works best.  &lt;p&gt;
+Adjust the brightness of your screen so you can interpret the displayed radiograph. &lt;p&gt;
+Click on "Left Pneumothorax" when you are ready.  &lt;p&gt;
+</TEXT>
+
+<IMG>tutorial.jpg</IMG>
+<ANSIMG>tutorial_a.jpg</ANSIMG>
+
+<ANSWER><TAG>Tutorial</TAG><TEXT>Normal</TEXT></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Left Pneumothorax</TEXT><CORRECT/></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Right Pneumothorax</TEXT></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Left SPN</TEXT></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Right SPN</TEXT></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Left FC</TEXT></ANSWER>
+<ANSWER><TAG>Tutorial</TAG><TEXT>Right FC</TEXT></ANSWER>
+
+</QUESTION>
+<QUESTION>
+<NOTIMER/>
+<TEXT>
+&lt;p&gt;
+You will get immediate feedback on your responses, and the the finding will be pointed out on the radiograph. &lt;/p&gt;
+</TEXT>
+</QUESTION>
+
+<QUESTION>
+<NOTIMER/>
+<TEXT>
+&lt;p&gt;
+A timer is available in the bottom right hand corner.  You will get a full &lt;b&gt;15 seconds&lt;/b&gt; for each case.  &lt;p&gt;
+
+You may drag the timer to move it, including moving it off screen to hide it.  &lt;p&gt;
+
+The timer for each case starts after the image is displayed.&lt;p&gt;
+
+</TEXT>
+</QUESTION>
+
+<QUESTION>
+<NOTIMER/>
+<TEXT>
+&lt;p&gt;
+This module should take about 20 minutes.
+&lt;p&gt;
+You are ready to begin.  Click "Next>>" to start your first case.
+
+</TEXT>
+</QUESTION>
+
+
+
+
+<QUESTION>
+<FEEDBACK/>
+<TEXT>
+Please identify the finding, if any, on the radiograph.&lt;p&gt;
+SPN: Solitary pulmonary nodule.&lt;br&gt;
+FC: Focal Consolidation
+</TEXT>
+
+<IMG>2.jpg</IMG>
+<ANSIMG>2A.jpg</ANSIMG>
+<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Left Pneumothorax</TEXT></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Right Pneumothorax</TEXT></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Left SPN</TEXT><CORRECT/></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Right SPN</TEXT></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Left FC</TEXT></ANSWER>
+<ANSWER><TAG>Normal</TAG><TEXT>Right FC</TEXT></ANSWER>
+</QUESTION>
+
+
+
+
+</QUIZ>

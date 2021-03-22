@@ -20,10 +20,17 @@ session_start();
 /*
     Connect to your database here.
 */
+/* testing sql extension
+if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+    echo 'We don\'t have mysqli!!!';
+} else {
+    echo 'Phew we have it!';
+}
+*/
 
 // exmaple:
 // $db = new mysqli('url', 'db_username', 'db_password','db_name');
-$db = new mysqli('localhost', 'root', '','centaur');
+$db = new mysqli('localhost', 'root', 'pennrads123','centaur');
 
 
 if (mysqli_connect_errno($db)) {
@@ -46,14 +53,14 @@ class Quiz  {
         $this->URLbase = $base;
     }
 
-    function getCover()  { 
-        if (isset($this->cover)) return $this->cover; 
+    function getCover()  {
+        if (isset($this->cover)) return $this->cover;
         else return False;
     }
     function setCover($c)  {
         $this->cover = $c;
     }
-    
+
     function getDivertModule()  {
         // This is the module user is sent to if they do not consent.
         return $this->divert;
@@ -65,14 +72,14 @@ class Quiz  {
     function getTitle() { return $this->title; }
     function getID() { return $this->id; }
     function getURL() { return $this->URLbase;}
-	function addQuestion($q)  { 
+	function addQuestion($q)  {
         $q->setID(sizeof($this->questions));
-        $this->questions []= $q; 
+        $this->questions []= $q;
     }
     function getQuestions() { return $this->questions; }
     function setAuthor($au) { $this->author = $au; }
     function getAuthor() { return $this->author; }
-    function getAnswerText($qindex, $aindex) { 
+    function getAnswerText($qindex, $aindex) {
         $ques = $this->questions[$qindex];
         $answers = $ques->getAnswerChoices();
         return $answers[$aindex];
@@ -175,8 +182,8 @@ class Question  {
         $ans->setID(sizeof($this->answers));
         $this->answers []= $ans;
     }
-    function addImage($filename) { $this->img []= $filename; } 
-    function addAnswerImage($filename) { $this->ansimg []= $filename; } 
+    function addImage($filename) { $this->img []= $filename; }
+    function addAnswerImage($filename) { $this->ansimg []= $filename; }
     function hasImage() { return sizeof($img)>0?True:False; }
     function hasAnswerImage() { return sizeof($ansimg)>0?True:False; }
     function getImages() { return $this->img; }
@@ -239,8 +246,8 @@ function addAnswer($a, $question)  {
     $ans = getValue($a, "TEXT");
     $tag = getValue($a, "TAG");
     $pt = 0;
-    if (isset($a['CORRECT'])) $pt = 1; 
-    else if (isset($a['HALF'])) $pt = 0.75; 
+    if (isset($a['CORRECT'])) $pt = 1;
+    else if (isset($a['HALF'])) $pt = 0.75;
     else if (isset($a['POINT']))  {
         $pt = floatval($a['POINT']);
     }

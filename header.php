@@ -18,10 +18,10 @@
 -->
 
 <head>
-<script src="/centaur/js/jquery-1.7.2.js"> </script>
-<script src="/centaur/js/jquery-ui.js"> </script>
-<script src="/centaur/js/jquery.plugin.min.js"> </script>
-<script src="/centaur/js/jquery.countdown.js"> </script>
+<script src="/js/jquery-1.7.2.js"> </script>
+<script src="/js/jquery-ui.js"> </script>
+<script src="/js/jquery.plugin.min.js"> </script>
+<script src="/js/jquery.countdown.js"> </script>
 <title>Centaur Radiology Educational Module</title>
 </head>
 <body>

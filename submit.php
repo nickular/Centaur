@@ -33,7 +33,7 @@ $attemptID = $_POST['attemptID'];    //Use Time for a unique attempt ID.
 $sql = "";
 $questions = $quiz->getQuestions();
 
-$questionID = -1; 
+$questionID = -1;
 $questionText = "";
 $responseID = -1;
 $responseText = "";
@@ -56,11 +56,11 @@ foreach ($_POST as $key=>$val)  {
             else if (sizeof($img) == 1) $notes .= "Image: $img; ";
             else  {
                 foreach ($img as $i)  {
-                       $notes .= "Image: $i; "; 
+                       $notes .= "Image: $i; ";
                 }
             }
         }
-		
+
         $tag = array_slice($keyArray, 4);
         $tag = join("_", $tag);
         $responseText = $db->escape_string($val);
@@ -69,7 +69,7 @@ foreach ($_POST as $key=>$val)  {
         if (isset($score[$tag]))  $score[$tag] += $point;
         else $score[$tag] = $point;
         $scoreMax[$tag] += floatval($questions[$questionID]->getMaxPossiblePoint($tag));
-        $sql = "REPLACE INTO responses (UniqueID, Username, GameID, AttemptID, QuestionID, QuestionText, Tag, ResponseID, ResponseText, PointValue, Notes) VALUES ('$uniqueID', '$username', $moduleID, $attemptID, $questionID, '$questionText', '$tag', $responseID, '$responseText', $point, '$notes');\n"; 
+        $sql = "REPLACE INTO responses (UniqueID, Username, GameID, AttemptID, QuestionID, QuestionText, Tag, ResponseID, ResponseText, PointValue, Notes) VALUES ('$uniqueID', '$username', $moduleID, $attemptID, $questionID, '$questionText', '$tag', $responseID, '$responseText', $point, '$notes');\n";
         if ($username != "notrack") {
 			$success = $db->query($sql) or die (mysqli_error($db));
 		}
@@ -94,7 +94,7 @@ foreach ($_POST as $key=>$val)  {
 <?php include "header.php"; ?>
 <H2>Summary of Your Results</H2>
 <table cellpadding=10pt border=0 align=center>
-<?php 
+<?php
 foreach ($score as $tag=>$scr)  {
     $ttl = str_replace("_", " ", $tag);
     if ($ttl == "default") continue;
@@ -110,9 +110,9 @@ if ($_SESSION['username'] == 'notrack')  {
 ?>
 </table>
 <BR>
-<center><A class="button" HREF="/centaur/">Home</A></center>
-<?php 
+<center><A class="button" HREF="/">Home</A></center>
+<?php
 
-include "footer.php"; 
+include "footer.php";
 
 ?>
