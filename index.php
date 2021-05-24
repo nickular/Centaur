@@ -24,11 +24,11 @@
   <title>Centaur - Rapid learning platform</title>
 </head>
 
-<?php include "header.php"; 
+<?php include "header.php";
 if (isset($_SESSION['username']) && ($_SESSION['username'] == 'notrack' || $_SESSION['username'] == "guest"))  {
     unset($_SESSION['username']);
 }
-    
+
 ?>
 
 
@@ -38,7 +38,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] == 'notrack' || $_SES
 <center><table>
 <tr><td colspan=3><H2 align=center>Available Modules</H2></tr>
 
-<!-- 
+<!--
 
 The eventual goal is to automatically display a list of available modules
 automatically using the database.  However, for now it suffices just
@@ -49,7 +49,7 @@ hardcoding that stuff in...
 <tr>
 
 <td width=33%><A HREF="cover.php?moduleid=1101"><img src="moduleImg/1101.png"></A>
-<td width=33%>&nbsp; </tr>
+<td width=33%>&nbsp; <A HREF="cover.php?moduleid=1001"><img src="moduleImg/DJpapaTisch.png"></A></tr>
 <td width=33%>&nbsp; </tr>
 <tr>
 <td colspan=3>
@@ -59,7 +59,3 @@ hardcoding that stuff in...
 </table>
 </center>
 <?php include "footer.php"; ?>
-
-
-		
-

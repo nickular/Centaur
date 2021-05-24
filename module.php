@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
     Copyright 2014 Po-Hao Chen.
 
@@ -99,7 +99,7 @@ function loadHiddenFields()  {
 function runFeedback(qindex, aindex, tag)  {
 	$('#centaurTimer').countdown('pause');
 	timeLimit[currentQuestion] = 0;
-    for (var i = 0; i < numA[qindex]; i++)  { 
+    for (var i = 0; i < numA[qindex]; i++)  {
         var theElement = document.getElementById('q' + qindex + 'a' + i);
         if (theElement.className == "button selected") {
             if (answers[qindex][i] > 0)  {
@@ -121,7 +121,7 @@ function runFeedback(qindex, aindex, tag)  {
 	}
 	if (!($.browser.msie && $.browser.version == 8)) {
 		scoreToDisplay = 0;
-		for (var i = 0; i < numA[qindex]; i++)  { 
+		for (var i = 0; i < numA[qindex]; i++)  {
 			if (document.getElementById('q' + qindex + 'a' + i).className.indexOf("selected") >= 0)  {
 				scoreToDisplay += answers[qindex][i];
 			};
@@ -143,7 +143,7 @@ function runFeedback(qindex, aindex, tag)  {
 	}
 }
 function recheckAnswers(qindex, aindex, tag, selectedText) {
-    for (var i = 0; i < numA[qindex]; i++)  { 
+    for (var i = 0; i < numA[qindex]; i++)  {
         if (i == aindex) document.getElementById('q' + qindex + 'a' + i).className='button selected';
         else if (answertags[qindex][i] == tag) {
             document.getElementById('q' + qindex + 'a' + i).className='button';
@@ -156,7 +156,7 @@ function recheckAnswers(qindex, aindex, tag, selectedText) {
     }
     if (allselected) {
         if (document.getElementById("btn_conf"+qindex) && confirmStatus)  {
-            document.getElementById("btn_conf"+qindex).className = "btnConfirm"; 
+            document.getElementById("btn_conf"+qindex).className = "btnConfirm";
         } else  {
             if (qindex < numA.length-1) enableNext();
             else document.getElementById("btn_next"+qindex).className = "btnSubmit";
@@ -175,7 +175,7 @@ function recheckAnswers(qindex, aindex, tag, selectedText) {
 	}
     $('a#btn_conf'+qindex).off("click").click(function(){
 		currentSelection = aindex;
-        if (document.getElementById("btn_conf"+qindex).className != "btnConfirm") return; 
+        if (document.getElementById("btn_conf"+qindex).className != "btnConfirm") return;
 		runFeedback(qindex, aindex, tag);
         document.getElementById("btn_conf"+qindex).className = "btnNextDisabled";
         if (qindex < numA.length-1) enableNext();
@@ -208,7 +208,7 @@ function timesUp()  {
 }
 
 function timerWarning(periods)  {
-	if ($.countdown.periodsToSeconds(periods) === 5) { 
+	if ($.countdown.periodsToSeconds(periods) === 5) {
         $('#centaurTimer').addClass('right half');
     }
 }
@@ -219,7 +219,7 @@ function recheckTimerStatus()  {
 		$('#centaurTimer').countdown('resume');
 		$('#centaurTimer').countdown('option', {until:+timeLimit[currentQuestion]});
 	} else  {
-		$('#centaurTimer').countdown('pause');	
+		$('#centaurTimer').countdown('pause');
 		$('#centaurTimer').text("Timer Off");
 	}
 }
@@ -234,7 +234,7 @@ function setNextButton() {
 			$(this).parents('.questionContainer').fadeOut(250, function(){
 				$(this).next().fadeIn(250, recheckTimerStatus);
 				var id = $(this).attr('id');
-				var count = id.substr(9);	
+				var count = id.substr(9);
 				var newID = 'container'+(parseInt(count)+1);
 				document.getElementById(newID).style.display="block";
 				// Use AJAX to send current results to be saved.
@@ -254,7 +254,7 @@ function setNextButton() {
 				});
 			var el = $('#progress');
 			el.width(el.width() + 800/numQ + 'px');
-			}); 
+			});
 }
 function enableNext ()  {
     for (var i = 0; i < numA.length-1; i++)  {
@@ -273,7 +273,7 @@ function enableNext ()  {
         });
     }
 	setNextButton();
-    
+
 }
 
 
@@ -356,7 +356,7 @@ foreach ($quiz->getQuestions() as $ques) {
             }
         }
     }
-    
+
     if ($qnum == 0) $hide = "";
     else $hide = "hide";
     $qtext = $ques->getQuestionText();
@@ -365,7 +365,7 @@ foreach ($quiz->getQuestions() as $ques) {
 <div class="questionContainer radius $hide" id="container$qnum">
     <div class="question">
 
-        <div class='questionImage'>$imgString</div>
+        <div class='questionImage' width=auto height=auto max-width=800px max-height=800px style=display:block>$imgString</div>
 END;
 
         if ($ansImgString) echo "<div class='answerImage hide'>$ansImgString</div>";
@@ -412,15 +412,15 @@ END;
     }
 
     echo <<< END
-            
+
         </div>
         <div class="prev">
 END;
 
     //if ($qnum > 0) echo '<a class="btnPrev">&lt;&lt; Prev</a>';
-   
+
     echo <<< END
-        
+
         </div>
         <div class="clear"></div>
     </div>
@@ -459,7 +459,7 @@ $(function(){
                 $(this).parents('.questionContainer').fadeOut(250, function(){
                     $(this).prev().fadeIn(250);
 					var id = $(this).attr('id');
-					var count = id.substr(9);	
+					var count = id.substr(9);
 					var newID = 'container'+(parseInt(count)-1);
 					document.getElementById(newID).style.display="block";
                 });
