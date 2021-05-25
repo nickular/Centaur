@@ -20,7 +20,7 @@ html {overflow-y:scroll;}
 body {
     font-size:12pt;color:#F0F4F6;
     background-color:#000000;margin:0px;
-    font-family:verdana;    
+    font-family:verdana;
 }
 
 p,td,ul {
@@ -41,7 +41,11 @@ body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input {
 }
 
 iframe 	{margin:0px;}
-img		{border:0;}
+img		{
+  border:0;
+  width: 100%;
+  height: 100%;
+}
 
 table,th,td,input,textarea {
 	font-size:100%;
@@ -104,10 +108,10 @@ table.sitemap a:hover,table.sitemap a:active {text-decoration:underline;color:bl
 
 input[type=submit] {
     padding:5px 15px; background:#7F7; border:0 none;
-    
+
     font-weight:bold;
     cursor:pointer;
-    border-radius: 15px 15px; 
+    border-radius: 15px 15px;
     }
 a.btnConfirm, a.btnNext, a.btnPrev, a.btnSubmit  {
     background-color:#227;
@@ -301,10 +305,10 @@ input {
 
 
 .radiobuttons input[type=radio] {
-   display:none; 
+   display:none;
 }
 
-.radiobuttons input[type="radio"]:checked + label { 
+.radiobuttons input[type="radio"]:checked + label {
     background-color:#7F7;
     color:#000;
 }
@@ -318,7 +322,7 @@ input {
 	z-index:999;
 }
 
-#centaurTimer { 
+#centaurTimer {
 	background-color:#000;
 	width: 140px;
 }
