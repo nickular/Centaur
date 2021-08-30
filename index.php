@@ -49,7 +49,7 @@ hardcoding that stuff in...
 <tr>
 
 <td width=33%><A HREF="cover.php?moduleid=1101"><img src="moduleImg/1101.png"></A>
-<td width=33%>&nbsp; <A HREF="cover.php?moduleid=1001"><img src="moduleImg/DJpapaTisch.png"></A></tr>
+<td width=33%>&nbsp; <A HREF="cover.php?moduleid=1001"><img src="moduleImg/GTA.png"></A></tr>
 <td width=33%>&nbsp; </tr>
 <tr>
 <td colspan=3>

@@ -40,7 +40,9 @@ var answertags = [];
 var answerFields = [];
 var currentQuestion = 0;
 var currentSelection = -1;
-var confirmStatus = <?php if ($quiz->getConfirmStatus()) echo "true"; else echo "false"; ?>
+var confirmStatus = <?php if ($quiz->getConfirmStatus()) echo "true"; else echo "false"; ?>;
+var secondsleftontheclock = 0;
+var totalscore = 0;
 
 
 // Adapted from MDC for indexOf function used for <IE9
@@ -124,6 +126,9 @@ function runFeedback(qindex, aindex, tag)  {
 		for (var i = 0; i < numA[qindex]; i++)  {
 			if (document.getElementById('q' + qindex + 'a' + i).className.indexOf("selected") >= 0)  {
 				scoreToDisplay += answers[qindex][i];
+        if (answers[qindex][i] == 1){
+          scoreToDisplay += secondsleftontheclock;
+      }
 			};
 		}
 		$('#scorePanel').text("+" + scoreToDisplay);
@@ -133,6 +138,8 @@ function runFeedback(qindex, aindex, tag)  {
 		} else if (scoreToDisplay < 1)  {
 			$('#scorePanel').attr('style', 'color:#ff7');
 		} else $('#scorePanel').attr('style', 'color:#7f7');
+
+    totalscore += scoreToDisplay;
 
 		$('#scorePanel').animate({
 			opacity: 0,
@@ -209,12 +216,16 @@ function timesUp()  {
 
 function timerWarning(periods)  {
 	if ($.countdown.periodsToSeconds(periods) === 5) {
-        $('#centaurTimer').addClass('right half');
+        $('#centaurTimer').addClass('right half'); //makes this a button.right.half
     }
+  secondsleftontheclock = $.countdown.periodsToSeconds(periods)
 }
 
 function recheckTimerStatus()  {
 	if (timeLimit[currentQuestion] > 0)  {
+    //this is the initialization of the countdown
+    //when it expires it will run timesUp
+    //every tick it will run TimesUp
 		$('#centaurTimer').countdown({layout: '{sn} {sl}', until:+timeLimit[currentQuestion], onExpiry: timesUp, onTick: timerWarning, format: 'S'});
 		$('#centaurTimer').countdown('resume');
 		$('#centaurTimer').countdown('option', {until:+timeLimit[currentQuestion]});

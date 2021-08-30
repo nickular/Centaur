@@ -93,8 +93,10 @@ foreach ($_POST as $key=>$val)  {
 </head>
 <?php include "header.php"; ?>
 <H2>Summary of Your Results</H2>
+
 <table cellpadding=10pt border=0 align=center>
 <?php
+echo $totalscore;
 foreach ($score as $tag=>$scr)  {
     $ttl = str_replace("_", " ", $tag);
     if ($ttl == "default") continue;

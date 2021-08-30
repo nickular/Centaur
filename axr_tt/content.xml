@@ -1,196 +1,196 @@
 <QUIZ>
 
-<!-- The URL base where we can find the images.  Defaults to root of domain if not set. -->
-<URLBASE>/axr_tt/images</URLBASE>
-<NOTRACKMODULE>1001</NOTRACKMODULE>
-<NOCONFIRM/> <!-- Feedback given immediately after clicking a choice -->
-<TIMER>15</TIMER>
-<ID>1001</ID> <!-- Pick a number up to 11 digits for ID. -->
-<AUTHOR>MM feat NC</AUTHOR>
-<TITLE>AXR TT</TITLE>
-<!--
-    Cover sheet contains a short blurb about the survey/quiz that
-    follows.  At the end of the cover sheet the user will be given
-    a chance to log in, create an account, or continue as Guest.
-    Relevant disclosures should go here.
+  <!-- The URL base where we can find the images.  Defaults to root of domain if not set. -->
+  <URLBASE>/axr_tt/images</URLBASE>
+  <NOTRACKMODULE>1001</NOTRACKMODULE>
+  <NOCONFIRM/> <!-- Feedback given immediately after clicking a choice -->
+  <TIMER>15</TIMER>
+  <ID>1001</ID> <!-- Pick a number up to 11 digits for ID. -->
+  <AUTHOR>MM feat NC</AUTHOR>
+  <TITLE>AXR TT</TITLE>
+  <!--
+  Cover sheet contains a short blurb about the survey/quiz that
+  follows.  At the end of the cover sheet the user will be given
+  a chance to log in, create an account, or continue as Guest.
+  Relevant disclosures should go here.
 
-    Data will not be collected if the user chooses Guest.
+  Data will not be collected if the user chooses Guest.
 
-    HTML is supported.
+  HTML is supported.
 -->
 
 
 <COVER>
-&lt;b&gt;
-Protocol Title:&lt;/B&gt; We do not adhere to any protocol.
-&lt;i&gt;
-&lt;B&gt;Your every move is being tracked by a shadow society, completion of this module is required.
- &lt;P&gt;
-The goal of the Centaur modules is beyond your meager level of comprehension.
-&lt;P&gt;
-&lt;i&gt;
-If you have any question, concerns, or complaints regarding your participation they will be ignored.
+  &lt;b&gt;
+  Protocol Title:&lt;/B&gt; We do not adhere to any protocol.
+  &lt;i&gt;
+  &lt;B&gt;Your every move is being tracked by a shadow society, completion of this module is required.
+  &lt;P&gt;
+  The goal of the Centaur modules is beyond your meager level of comprehension.
+  &lt;P&gt;
+  &lt;i&gt;
+  If you have any question, concerns, or complaints regarding your participation they will be ignored.
 
-&lt;/i&gt;
+  &lt;/i&gt;
 
 </COVER>
 
 <QUESTION>
-<TEXT>
+  <TEXT>
 
-&lt;H2&gt;Instructions&lt;/H2&gt;
+    &lt;H2&gt;Instructions&lt;/H2&gt;
 
-You're going to see a series of abdominal plain films.  Your task is to decide whether there is ileus, obstruction, or neither.
-You can ignore the rest (for now), but other incidentals will be noted in the answers if you want to see if you can get those too.
-</TEXT>
+    You're going to see a series of abdominal plain films.  Your task is to decide whether there is ileus, obstruction, or neither.
+    You can ignore the rest (for now), but other incidentals will be noted in the answers if you want to see if you can get those too.
+  </TEXT>
 </QUESTION>
 
 
 <QUESTION>
-<NOTIMER/>
-<TEXT>
-&lt;p&gt;
-A timer is available in the bottom right hand corner.  You will get a full &lt;b&gt;15 seconds&lt;/b&gt; for each case.  &lt;p&gt;
+  <NOTIMER/>
+  <TEXT>
+    &lt;p&gt;
+    A timer is available in the bottom right hand corner.  You will get a full &lt;b&gt;15 seconds&lt;/b&gt; for each case.  &lt;p&gt;
 
-You may drag the timer to move it, including moving it off screen to hide it.  &lt;p&gt;
+    You may drag the timer to move it, including moving it off screen to hide it.  &lt;p&gt;
 
-The timer for each case starts after the image is displayed.&lt;p&gt;
+    The timer for each case starts after the image is displayed.&lt;p&gt;
 
-</TEXT>
+  </TEXT>
 </QUESTION>
 
 <QUESTION>
-<NOTIMER/>
-<TEXT>
-&lt;p&gt;
-This module should take about 20 minutes.
-&lt;p&gt;
-Ready?  Here we go.  Click "Next>>" to start your first case.
+  <NOTIMER/>
+  <TEXT>
+    &lt;p&gt;
+    This module should take about 20 minutes.
+    &lt;p&gt;
+    Ready?  Here we go.  Click "Next>>" to start your first case.
 
-</TEXT>
+  </TEXT>
 </QUESTION>
 
 
 
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image1.jpg</IMG>
-<ANSIMG>image1.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image1.jpg</IMG>
+  <ANSIMG>image1.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image2.jpg</IMG>
-<ANSIMG>image2.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image2.jpg</IMG>
+  <ANSIMG>image2.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image3.jpg</IMG>
-<ANSIMG>image3.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image3.jpg</IMG>
+  <ANSIMG>image3.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image4.jpg</IMG>
-<ANSIMG>image4.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image4.jpg</IMG>
+  <ANSIMG>image4.jpg</ANSIMG>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Normal</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image5.jpg</IMG>
-<ANSIMG>image5.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image5.jpg</IMG>
+  <ANSIMG>image5.jpg</ANSIMG>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Normal</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image6.jpg</IMG>
-<ANSIMG>image6.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image6.jpg</IMG>
+  <ANSIMG>image6.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image7.jpg</IMG>
-<ANSIMG>image7.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image7.jpg</IMG>
+  <ANSIMG>image7.jpg</ANSIMG>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Normal</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Obstruction</TAG><TEXT>Obstruction</TEXT><CORRECT/></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image8.jpg</IMG>
-<ANSIMG>image8.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image8.jpg</IMG>
+  <ANSIMG>image8.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image9.jpg</IMG>
-<ANSIMG>image9.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image9.jpg</IMG>
+  <ANSIMG>image9.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 <QUESTION>
-<FEEDBACK/>
-<TEXT>
-Ileus, obstruction, or normal?
-</TEXT>
-<IMG>image10.jpg</IMG>
-<ANSIMG>image10.jpg</ANSIMG>
-<ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
-<ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
+  <FEEDBACK/>
+  <TEXT>
+    Ileus, obstruction, or normal?
+  </TEXT>
+  <IMG>image10.jpg</IMG>
+  <ANSIMG>image10.jpg</ANSIMG>
+  <ANSWER><TAG>Normal</TAG><TEXT>Normal</TEXT><CORRECT/></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Ileus</TEXT></ANSWER>
+  <ANSWER><TAG>Normal</TAG><TEXT>Obstruction</TEXT></ANSWER>
 </QUESTION>
 
 </QUIZ>
