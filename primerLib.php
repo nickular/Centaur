@@ -30,8 +30,7 @@ if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
 
 // exmaple:
 // $db = new mysqli('url', 'db_username', 'db_password','db_name');
-$db = new mysqli('localhost', 'root', 'pennrads123','centaur');
-
+$db = new mysqli('localhost', 'pennrads', 'pennrads123','centaur');
 
 if (mysqli_connect_errno($db)) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();

@@ -10,6 +10,14 @@ A set of PHP/MySQL source code to display image and provide an interface for rap
 
 Try it [here] (http://capricornradiology.org/centaur).
 
+## Getting mysql set up
+
+1. Log in to mysql using the mysql root
+2. Create the pennrads account
+CREATE USER 'pennrads'@'localhost' IDENTIFIED BY 'pennrads123';
+3. Grant privileges to edit the centaur database
+GRANT ALL PRIVILEGES ON centaur.* TO pennrads@localhost;
+
 ## Installation
 
 1. Copy files to a web directory
