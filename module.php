@@ -371,22 +371,22 @@ foreach ($quiz->getQuestions() as $ques) {
     if ($qnum == 0) $hide = "";
     else $hide = "hide";
     $qtext = $ques->getQuestionText();
-    echo <<< END
+    echo <<< HTML
 
 <div class="questionContainer radius $hide" id="container$qnum">
     <div class="question">
 
         <div class='questionImage' width=auto height=auto max-width=800px max-height=800px style=display:block>$imgString</div>
-END;
+HTML;
 
         if ($ansImgString) echo "<div class='answerImage hide'>$ansImgString</div>";
 
-    echo <<< END
+    echo <<< HTML
         $qtext
     </div>
     <center>
     <div class="answers" style="display:table-row">
-END;
+HTML;
     $tags = $ques->getTags();
     $actualID = $ques->getID();
     $anum = 0;
@@ -402,11 +402,11 @@ END;
         echo "</div>\n";
         echo "<input type='hidden' name='actualQID_$actualID" . "_" . "answer_$qnum" . "_" . "$tag' id='answer_$qnum" . "_" . "$tag' value='NOANSWER' />\n";
     }
-    echo <<< END
+    echo <<< HTML
     </div>
     <div class="btnContainer">
         <div class="next">
-END;
+HTML;
 
     if ($ques->isRequired() || ($qnum < $numq-1 && sizeof($ques->getAnswerChoices()) > 0)){
         if (!$ques->hasFeedback())  {
@@ -422,15 +422,15 @@ END;
         echo '<a class="btnSubmit" id="btn_next' . $qnum . '">Finish!</a>';
     }
 
-    echo <<< END
+    echo <<< HTML
 
         </div>
         <div class="prev">
-END;
+HTML;
 
     //if ($qnum > 0) echo '<a class="btnPrev">&lt;&lt; Prev</a>';
 
-    echo <<< END
+    echo <<< HTML
 
         </div>
         <div class="clear"></div>
@@ -438,7 +438,7 @@ END;
     </center>
     </div>
 </div>
-END;
+HTML;
     $qnum++;
 }
 

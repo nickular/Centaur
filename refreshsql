@@ -1,0 +1,4 @@
+cmd1 = "mysql -u root -p < Centaur.sql"
+cmd2 = "mysql -u root -p < ./scripts/AddTestModule.sql"
+$cmd1
+$cmd2
